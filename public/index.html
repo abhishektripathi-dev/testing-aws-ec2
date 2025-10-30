@@ -9,5 +9,27 @@
     <h1>Hello Everyone!!!</h1>
     <hr>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio assumenda accusamus hic officia. Maxime eaque a tenetur deleniti itaque earum nesciunt temporibus eius optio? Commodi perspiciatis id quibusdam nobis quia.</p>
+
+    <form action="/api/user" method="post">
+    <!-- Text input for username -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br><br>
+
+    <label for="password">Password</label>
+    <input type="text" id="password" name="password" required>
+    <br><br>
+
+    <!-- Radio buttons for gender -->
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <br><br>
+
+    <!-- Submit button -->
+    <input type="submit" value="Submit">
+</form>
 </body>
 </html>
