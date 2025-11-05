@@ -1,10 +1,13 @@
+require("dotenv").config();
 const express = require("express");
 const path = require("path");
 
 const sequelize = require("./config/db");
 const User = require("./models/User");
 const userRouter = require("./routers/userRouter");
+const { config } = require("dotenv");
 
+const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -19,7 +22,7 @@ sequelize
     .sync()
     .then(() => {
         console.log("Database sync...");
-        app.listen(3000, () => {
+        app.listen(PORT, () => {
             console.log("Server running on port 3000.");
         });
     })
